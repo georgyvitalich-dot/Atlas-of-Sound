@@ -1,0 +1,162 @@
+{
+  "us-ca": {
+    "day": {
+      "url": "/textures/detail/us-ca-day.jpg",
+      "west": -125.23333333333333,
+      "east": -113.30833333333334,
+      "north": 42.833333333333336,
+      "south": 31.708333333333336,
+      "width": 2862,
+      "height": 2670
+    },
+    "terrain": {
+      "url": "/textures/detail/us-ca-terrain.jpg",
+      "west": -125.23333333333333,
+      "east": -113.3,
+      "north": 42.833333333333336,
+      "south": 31.700000000000003,
+      "width": 1432,
+      "height": 1336
+    }
+  },
+  "us-wa": {
+    "day": {
+      "url": "/textures/detail/us-wa-day.jpg",
+      "west": -125.3625,
+      "east": -116.2875,
+      "north": 49.62916666666667,
+      "south": 44.916666666666664,
+      "width": 2178,
+      "height": 1131
+    },
+    "terrain": {
+      "url": "/textures/detail/us-wa-terrain.jpg",
+      "west": -125.36666666666667,
+      "east": -116.28333333333333,
+      "north": 49.63333333333333,
+      "south": 44.916666666666664,
+      "width": 1090,
+      "height": 566
+    }
+  },
+  "us-co": {
+    "day": {
+      "url": "/textures/detail/us-co-day.jpg",
+      "west": -109.6625,
+      "east": -101.44166666666666,
+      "north": 41.604166666666664,
+      "south": 36.391666666666666,
+      "width": 1973,
+      "height": 1251
+    },
+    "terrain": {
+      "url": "/textures/detail/us-co-terrain.jpg",
+      "west": -109.66666666666667,
+      "east": -101.43333333333334,
+      "north": 41.61666666666667,
+      "south": 36.38333333333333,
+      "width": 988,
+      "height": 628
+    }
+  },
+  "us-tx": {
+    "day": {
+      "url": "/textures/detail/us-tx-day.jpg",
+      "west": -107.7,
+      "east": -92.46666666666667,
+      "north": 37.55416666666667,
+      "south": 24.787499999999994,
+      "width": 3656,
+      "height": 3064
+    },
+    "terrain": {
+      "url": "/textures/detail/us-tx-terrain.jpg",
+      "west": -107.7,
+      "east": -92.46666666666667,
+      "north": 37.56666666666667,
+      "south": 24.78333333333333,
+      "width": 1828,
+      "height": 1534
+    }
+  },
+  "us-tn": {
+    "day": {
+      "url": "/textures/detail/us-tn-day.jpg",
+      "west": -91.00416666666666,
+      "east": -80.95416666666667,
+      "north": 37.375,
+      "south": 34.2875,
+      "width": 2412,
+      "height": 741
+    },
+    "terrain": {
+      "url": "/textures/detail/us-tn-terrain.jpg",
+      "west": -91.01666666666667,
+      "east": -80.95,
+      "north": 37.38333333333333,
+      "south": 34.28333333333333,
+      "width": 1208,
+      "height": 372
+    }
+  },
+  "us-mi": {
+    "day": {
+      "url": "/textures/detail/us-mi-day.jpg",
+      "west": -91.05833333333334,
+      "east": -81.775,
+      "north": 48.833333333333336,
+      "south": 41.05416666666667,
+      "width": 2228,
+      "height": 1867
+    },
+    "terrain": {
+      "url": "/textures/detail/us-mi-terrain.jpg",
+      "west": -91.06666666666666,
+      "east": -81.76666666666667,
+      "north": 48.833333333333336,
+      "south": 41.05,
+      "width": 1116,
+      "height": 934
+    }
+  },
+  "us-il": {
+    "day": {
+      "url": "/textures/detail/us-il-day.jpg",
+      "west": -92.11666666666666,
+      "east": -86.89166666666667,
+      "north": 43.1125,
+      "south": 36.36666666666667,
+      "width": 1254,
+      "height": 1619
+    },
+    "terrain": {
+      "url": "/textures/detail/us-il-terrain.jpg",
+      "west": -92.11666666666666,
+      "east": -86.88333333333334,
+      "north": 43.11666666666667,
+      "south": 36.36666666666667,
+      "width": 628,
+      "height": 810
+    }
+  },
+  "us-ny": {
+    "day": {
+      "url": "/textures/detail/us-ny-day.jpg",
+      "west": -80.4,
+      "east": -71.22083333333333,
+      "north": 45.65,
+      "south": 39.86666666666667,
+      "width": 2203,
+      "height": 1388
+    },
+    "terrain": {
+      "url": "/textures/detail/us-ny-terrain.jpg",
+      "west": -80.4,
+      "east": -71.21666666666667,
+      "north": 45.65,
+      "south": 39.86666666666667,
+      "width": 1102,
+      "height": 694
+    }
+  }
+}

@@ -1,0 +1,80 @@
+import type { LonLat, Region } from '../../../types';
+
+/**
+ * All 50 states. `geoKey` is the FIPS code used by the us-atlas TopoJSON.
+ * Tuple: [fips, code, English, Polish?, Russian]
+ */
+const STATES: [string, string, string, string | null, string][] = [
+  ['01', 'AL', 'Alabama', null, 'Алабама'],
+  ['02', 'AK', 'Alaska', null, 'Аляска'],
+  ['04', 'AZ', 'Arizona', null, 'Аризона'],
+  ['05', 'AR', 'Arkansas', null, 'Арканзас'],
+  ['06', 'CA', 'California', 'Kalifornia', 'Калифорния'],
+  ['08', 'CO', 'Colorado', 'Kolorado', 'Колорадо'],
+  ['09', 'CT', 'Connecticut', null, 'Коннектикут'],
+  ['10', 'DE', 'Delaware', null, 'Делавэр'],
+  ['12', 'FL', 'Florida', 'Floryda', 'Флорида'],
+  ['13', 'GA', 'Georgia', null, 'Джорджия'],
+  ['15', 'HI', 'Hawaii', 'Hawaje', 'Гавайи'],
+  ['16', 'ID', 'Idaho', null, 'Айдахо'],
+  ['17', 'IL', 'Illinois', null, 'Иллинойс'],
+  ['18', 'IN', 'Indiana', null, 'Индиана'],
+  ['19', 'IA', 'Iowa', null, 'Айова'],
+  ['20', 'KS', 'Kansas', null, 'Канзас'],
+  ['21', 'KY', 'Kentucky', null, 'Кентукки'],
+  ['22', 'LA', 'Louisiana', 'Luizjana', 'Луизиана'],
+  ['23', 'ME', 'Maine', null, 'Мэн'],
+  ['24', 'MD', 'Maryland', null, 'Мэриленд'],
+  ['25', 'MA', 'Massachusetts', null, 'Массачусетс'],
+  ['26', 'MI', 'Michigan', null, 'Мичиган'],
+  ['27', 'MN', 'Minnesota', null, 'Миннесота'],
+  ['28', 'MS', 'Mississippi', 'Missisipi', 'Миссисипи'],
+  ['29', 'MO', 'Missouri', null, 'Миссури'],
+  ['30', 'MT', 'Montana', null, 'Монтана'],
+  ['31', 'NE', 'Nebraska', null, 'Небраска'],
+  ['32', 'NV', 'Nevada', null, 'Невада'],
+  ['33', 'NH', 'New Hampshire', null, 'Нью-Гэмпшир'],
+  ['34', 'NJ', 'New Jersey', null, 'Нью-Джерси'],
+  ['35', 'NM', 'New Mexico', 'Nowy Meksyk', 'Нью-Мексико'],
+  ['36', 'NY', 'New York', 'Nowy Jork', 'Нью-Йорк'],
+  ['37', 'NC', 'North Carolina', 'Karolina Północna', 'Северная Каролина'],
+  ['38', 'ND', 'North Dakota', 'Dakota Północna', 'Северная Дакота'],
+  ['39', 'OH', 'Ohio', null, 'Огайо'],
+  ['40', 'OK', 'Oklahoma', null, 'Оклахома'],
+  ['41', 'OR', 'Oregon', null, 'Орегон'],
+  ['42', 'PA', 'Pennsylvania', 'Pensylwania', 'Пенсильвания'],
+  ['44', 'RI', 'Rhode Island', null, 'Род-Айленд'],
+  ['45', 'SC', 'South Carolina', 'Karolina Południowa', 'Южная Каролина'],
+  ['46', 'SD', 'South Dakota', 'Dakota Południowa', 'Южная Дакота'],
+  ['47', 'TN', 'Tennessee', null, 'Теннесси'],
+  ['48', 'TX', 'Texas', 'Teksas', 'Техас'],
+  ['49', 'UT', 'Utah', null, 'Юта'],
+  ['50', 'VT', 'Vermont', null, 'Вермонт'],
+  ['51', 'VA', 'Virginia', 'Wirginia', 'Виргиния'],
+  ['53', 'WA', 'Washington', 'Waszyngton', 'Вашингтон'],
+  ['54', 'WV', 'West Virginia', 'Wirginia Zachodnia', 'Западная Виргиния'],
+  ['55', 'WI', 'Wisconsin', null, 'Висконсин'],
+  ['56', 'WY', 'Wyoming', null, 'Вайоминг'],
+];
+
+/** Hand-tuned anchors where the centroid looks wrong (lakes, peninsulas). */
+const LABEL_POINTS: Record<string, LonLat> = {
+  MI: [-84.7, 43.4],
+  FL: [-81.7, 28.4],
+  LA: [-92.2, 31.0],
+  CA: [-119.6, 37.0],
+  NY: [-75.4, 42.9],
+  TX: [-99.2, 31.3],
+  TN: [-86.4, 35.85],
+  HI: [-157.2, 20.8],
+  AK: [-152, 64],
+};
+
+export const US_REGIONS: Region[] = STATES.map(([fips, code, en, pl, ru]) => ({
+  id: `us-${code.toLowerCase()}`,
+  countryId: 'us',
+  geoKey: fips,
+  code,
+  name: { en, pl: pl ?? en, ru },
+  labelPoint: LABEL_POINTS[code],
+}));

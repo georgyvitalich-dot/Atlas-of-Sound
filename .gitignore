@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.vercel/
+.env*
+# Raw NASA sources for `npm run build:textures` (~180 MB, re-downloaded on demand)
+assets-src/
+# Local review bundles and release snapshots
+review/
+releases/
